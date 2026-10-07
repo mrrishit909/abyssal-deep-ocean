@@ -1,0 +1,5 @@
+{
+  "name": "@abyssal/web", "private": true, "type": "module",
+  "dependencies": { "@react-three/fiber": "^9.8.1", "gsap": "^3.13.0", "next": "^16.4.0", "react": "^19.3.0", "react-dom": "^19.3.0", "three": "^0.186.1" },
+  "scripts": { "dev": "next dev -p 8631", "build": "NEXT_TELEMETRY_DISABLED=1 next build --webpack" }
+}

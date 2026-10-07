@@ -1,0 +1,32 @@
+{
+  "name": "abyssal-deep-ocean",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "seed": "node data/simulators/generate.ts",
+    "model": "~/Applications/Blender.app/Contents/MacOS/Blender -b -P model/build.py && ~/Applications/Blender.app/Contents/MacOS/Blender -b -P model/validate.py",
+    "test": "vitest run",
+    "build": "node scripts/copy-assets.ts && npm run build -w @abyssal/web",
+    "e2e": "playwright test",
+    "typecheck": "tsc -p . && (cd apps/web && tsc --noEmit -p .)"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@types/ws": "^8.18.2",
+    "@vitest/coverage-v8": "^5.0.3",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3",
+    "ws": "^8.22.0"
+  }
+}

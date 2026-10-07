@@ -1,0 +1,50 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "ABYSSAL API",
+  "version": "1.0.0",
+  "description": "Synthetic deep-ocean demo data."
+ },
+ "paths": {
+  "/v1/expeditions": {
+   "get": {
+    "summary": "List expeditions"
+   }
+  },
+  "/v1/dives/{id}": {
+   "get": {
+    "summary": "One dive with its track"
+   }
+  },
+  "/v1/dives/{id}/telemetry": {
+   "get": {
+    "summary": "Telemetry, paged (limit<=500, cursor) and optionally decimated (step)"
+   }
+  },
+  "/v1/dives/{id}/observations": {
+   "get": {
+    "summary": "Observations for a dive"
+   }
+  },
+  "/v1/dives/{id}/observations/{oid}/notes": {
+   "post": {
+    "summary": "Add a note; requires Idempotency-Key"
+   }
+  },
+  "/v1/bathymetry/tiles/{z}/{x}/{y}": {
+   "get": {
+    "summary": "17x17 depth tile"
+   }
+  },
+  "/v1/fleet": {
+   "get": {
+    "summary": "ROV fleet"
+   }
+  },
+  "/v1/dives/{id}/live": {
+   "get": {
+    "summary": "WebSocket: replays telemetry as live frames (query speed=1..600)"
+   }
+  }
+ }
+}

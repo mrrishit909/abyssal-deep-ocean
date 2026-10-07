@@ -1,0 +1,4 @@
+{
+  "permissions": { "allow": ["Bash(npm run *)", "Bash(npx vitest *)", "Bash(npx playwright *)", "Bash(node scripts/*)", "Bash(~/Applications/Blender.app/Contents/MacOS/Blender -b *)"], "deny": ["Read(./.env)"] },
+  "hooks": { "PostToolUse": [{ "matcher": "Write|Edit", "hooks": [{ "type": "command", "command": "node scripts/claude/post-edit.mjs" }] }] }
+}

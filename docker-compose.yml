@@ -1,0 +1,4 @@
+# The demo needs no database: the API serves the generated dataset. Postgres/PostGIS is the production store (see docs/architecture.md).
+services:
+  web: { build: { context: ., target: web }, ports: ["8631:80"] }
+  api: { build: { context: ., target: api }, ports: ["8630:8630"] }

@@ -1,0 +1,28 @@
+{
+ "submersible.glb": {
+  "tris": 2266,
+  "bytes": 100616,
+  "materials": [
+   "Dome",
+   "FrameNavy",
+   "HullWhite",
+   "LampGlow",
+   "SampleViolet",
+   "SonarCyan"
+  ],
+  "missing": [],
+  "orphans": [],
+  "pivots_unit_scale": true
+ },
+ "seabed-kit.glb": {
+  "tris": 1536,
+  "bytes": 51584,
+  "materials": [
+   "Rock",
+   "VentGlow"
+  ],
+  "missing": [],
+  "orphans": [],
+  "pivots_unit_scale": true
+ }
+}
