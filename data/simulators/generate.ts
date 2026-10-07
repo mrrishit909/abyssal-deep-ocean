@@ -51,7 +51,7 @@ plan.forEach(([expId, veh, maxDepth, n], idx) => {
 });
 // The hidden structure from the intro: found on the last dive of the abyssal transect.
 const last = dives[dives.length - 1], lt = telemetry[last.id].find((p) => p.t >= 7200)!;
-observations.push({ id: `${last.id}-structure`, diveId: last.id, t: lt.t, type: "structure", label: "Hidden structure (unidentified, 38 m across)", confidence: 0.62, x: lt.x + 60, z: lt.z + 90, depthM: lt.depthM, note: "Regular geometry on a sediment plain. Needs a second pass before anyone names it." });
+observations.push({ id: `${last.id}-structure`, diveId: last.id, t: lt.t, type: "structure", label: "Hidden structure (unidentified, about 280 m across)", confidence: 0.62, x: lt.x + 60, z: lt.z + 90, depthM: lt.depthM, note: "Regular geometry on a sediment plain. Needs a second pass before anyone names it." });
 
 const out = new URL("../generated/", import.meta.url).pathname;
 mkdirSync(out, { recursive: true });
